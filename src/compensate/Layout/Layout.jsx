@@ -1,6 +1,8 @@
 import React from "react";
 import "./Layout.css";
 import { Outlet, Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook ,faInstagram,faGithub} from "@fortawesome/free-brands-svg-icons";
 
 const Layout = () => {
   return (
@@ -12,21 +14,21 @@ const Layout = () => {
         />
         <div className="left-nav">
           <Link to="/" className="link-nav">
-            Homepage{" "}
+            Homepage
           </Link>
           <Link to="/about" className="link-nav">
-            About Us{" "}
+            About Us
           </Link>
           <Link to="/" className="link-nav">
-            homepage{" "}
+            Homepage
           </Link>
           <Link to="/" className="link-nav">
-            homepage{" "}
+            Homepage
           </Link>
         </div>
       </div>
       <hr />
-      <Outlet></Outlet>
+      <Outlet />
       <hr />
       <footer className="footer">
         <div className="social-links">
@@ -35,21 +37,21 @@ const Layout = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-facebook"></i>
+            <FontAwesomeIcon icon={faFacebook} />
           </a>
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-instagram"></i>
+            <FontAwesomeIcon icon={faInstagram} />
           </a>
           <a
             href="https://www.github.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <i className="fab fa-github"></i>
+            <FontAwesomeIcon icon={faGithub} />
           </a>
         </div>
         <ul className="footer-links">
