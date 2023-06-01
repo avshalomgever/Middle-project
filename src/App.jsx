@@ -1,9 +1,9 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
 
-import Layout from "./compensate/Layout/Layout";
-import HomePage from "./compensate/Homepage/Homepage";
-import About from "./compensate/Aboutus/About";
+import Layout from "./components/Layout/Layout";
+import HomePage from "./components/Homepage/Homepage";
+import About from "./components/Aboutus/About";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
 function App() {
