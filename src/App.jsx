@@ -2,7 +2,7 @@ import React from "react";
 import { Routes, Route } from "react-router-dom";
 
 import Layout from "./compensate/Layout/Layout";
-import Homepage from "./compensate/Homepage/Homepage";
+import HomePage from "./compensate/Homepage/Homepage";
 import About from "./compensate/Aboutus/About";
 import '@fortawesome/fontawesome-svg-core/styles.css';
 
@@ -12,13 +12,15 @@ function App() {
   
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<Homepage />} />
+          <Route index element={<HomePage />} />
           <Route path="about" element={<About/>} />
           <Route path="*" element={<div>404 Not Found</div>} />
         </Route>
       </Routes>
     </>
   );
-}
+  }
+
+
 
 export default App;
