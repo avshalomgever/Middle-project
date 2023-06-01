@@ -1,0 +1,197 @@
+/* .about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://cdn0.weddingwire.com/article/3293/3_2/960/jpg/13923-0-cheekwood-estate-gardens-botanical-gardens-wedding.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h-about {
+  margin-top: 0;
+}
+
+.icon-about {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+  gap:1em ;
+}
+
+.icon-about span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icon-about p {
+  margin-top: 0.5rem;
+}
+
+.comment-section {
+  margin-top: 4rem;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-story {
+  background-color: black;
+  height: auto;
+  gap: 2em;
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.black-div {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: #d1be9c;
+  border-radius: 3em;
+  flex: 1;
+}
+
+.story-img {
+  border-radius: 3em;
+  max-width: 100%;
+  height: auto;
+} */
+.about-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("https://cdn0.weddingwire.com/article/3293/3_2/960/jpg/13923-0-cheekwood-estate-gardens-botanical-gardens-wedding.jpeg");
+  background-size: cover;
+  background-position: center;
+}
+
+.about {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 2rem;
+}
+
+.about-content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.h-about {
+  margin-top: 0;
+}
+
+.icon-about {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 2rem;
+}
+
+.icon-about span {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-right: 1rem;
+}
+
+.icon-about p {
+  margin-top: 0.5rem;
+}
+
+.comment-section {
+  margin-top: 4rem;
+}
+
+.comment {
+  display: flex;
+  align-items: center;
+}
+
+.comment-img {
+  max-width: 100%;
+  height: auto;
+}
+
+.about-story {
+  background-color: black;
+  height: auto;
+  gap: 2em;
+  padding: 2em;
+  display: flex;
+}
+
+.black-div {
+  width: 100%;
+  max-width: 600px;
+  height: 100%;
+  background-color: #d1be9c;
+  border-radius: 3em;
+  flex: 1;
+}
+
+.story-img {
+  border-radius: 3em;
+  max-width: 100%;
+  height: auto;
+}
+
+.about-btn {
+  padding: 1rem 2rem;
+  background-color: #d1be9c;
+  color: #ffffff;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 15vw;
+}
+
+.about-btn:hover {
+  background-color: #c0ab8d;
+}
+
+@media (max-width: 768px) {
+  .about-story {
+    flex-direction: column;
+  }
+
+  .text-container,
+  .image-container {
+    flex: 1 1 100%;
+    text-align: center;
+  }
+}
