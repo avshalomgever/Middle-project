@@ -11,6 +11,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import {Link} from 'react-router-dom'
 
 function HomePage() {
   const [data1, setData1] = useState([]);
@@ -59,7 +60,9 @@ function HomePage() {
             porro ad cupiditate sunt temporibus aliquid praesentium incidunt
             vitae! Omnis ab harum sequi!
           </p>
+          <Link to={'/event'}> 
           <button className="button-routes">To the wedding</button>
+          </Link>
         </div>
       </div>
       <div className="carousel">
