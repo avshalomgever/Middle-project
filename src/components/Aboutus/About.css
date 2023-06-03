@@ -153,6 +153,15 @@
   padding: 2em;
   display: flex;
 }
+.text-container {
+  width: 60%;
+  height: auto;
+  border: 3px solid #ffffff;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+ color: #ffffff;
+}
 
 .black-div {
   width: 100%;

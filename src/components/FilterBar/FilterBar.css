@@ -1,0 +1,22 @@
+.filter-bar {
+  background-color: antiquewhite;
+  border: 2px black solid;
+  border-radius: 10px;
+
+}
+.fieldset-container {
+  display: flex;
+  justify-content: space-around;
+
+}
+
+.form-fildset {
+  margin-right: 1rem;  border: none;
+  padding: 0;
+  
+}
+.submite-filter{
+  background-color: whitesmoke;
+  height: 6vh;
+  align-self: center;
+}

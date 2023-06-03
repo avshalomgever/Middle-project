@@ -1,0 +1,21 @@
+.EventPage{
+    display:flex ;
+    flex-direction: column;
+    justify-content: center;
+    gap: 2vh;
+     
+}
+.openning{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+.fit4u{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 2vh;
+}
