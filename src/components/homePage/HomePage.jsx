@@ -60,7 +60,7 @@ function HomePage() {
             porro ad cupiditate sunt temporibus aliquid praesentium incidunt
             vitae! Omnis ab harum sequi!
           </p>
-          <Link to={'/event'}> 
+          <Link to={'/EventPage'}> 
           <button className="button-routes">To the wedding</button>
           </Link>
         </div>
