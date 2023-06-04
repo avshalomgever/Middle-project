@@ -1,59 +1,112 @@
-.card-container{
-display: flex;
-justify-content: space-around;
-width: 100%;
+.top-choice {
+  width: 100%;
+  height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  gap: 2vw;
 }
+.card-container {
+  display: flex;
+  justify-content: space-around;
+  /* width: 100%; */
+}
+
 .container {
-    height: 80vh;
-    perspective: 800px;
-    display: flex;
-    flex-direction: column;
-   }
+  height: fit-content;
+  perspective: 800px;
+  display: flex;
+  flex-direction: column;
+}
+
+.container:hover .card {
+  cursor: pointer;
+  transform: rotateY(180deg);
+}
+
+.card {
+  min-height: 300px;
+  height: 50vh;
+  min-width: 250px;
+  width: 30vh;
+  max-width: 350px;
+  position: relative;
+  transition: transform 1500ms;
+  transform-style: preserve-3d;
+}
+
+.front,
+.back {
+  height: 100%;
+  width: 100%;
+  border-radius: 2rem;
+  box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.back {
+  background-color: #3a3a3a;
+  transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+  color: #fff;
+  text-align: center;
+}
+
+.front {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-position: center;
+  padding: 0;
+}
+.card-name {
+  position: absolute;
+  color:#fff;
+
+}
+#img {
+ width: 100%;
+ height: 100%;
+ border-radius: 2rem;
+
   
-  .container:hover > .card {
-    cursor: pointer;
-    transform: rotateY(180deg);
-  }
+}
+.card-name {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+#card-1{
+}
+#card-2{
+  align-self: center;
   
+}
+#card-3{
+  align-self: flex-end;
+
+}
+.container a {
+  text-decoration: none;
+}
+
+button {
+  padding: 0.5rem 1rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 0.3rem;
+  cursor: pointer;
+}
+
+
+@media (max-width: 768px) {
   .card {
-    height: 40vh;
-    width: 20vw;
-    position: relative;
-    transition: transform 1500ms;
-    transform-style: preserve-3d;
- 
+    width:40vw;
   }
-  
-  .front,
-  .back {
-    height: 100%;
-    width: 100%;
-    border-radius: 2rem;
-    box-shadow: 0 0 5px 2px rgba(50, 50, 50, 0.25);
-    position: absolute;
-    backface-visibility: hidden;
-  }
-  
-  .front {
-    background-image: url(https://source.unsplash.com/random/350x500);
-  }
-  
-  .back {
-    background-color: #3a3a3a;
-    transform: rotateY(180deg);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 5rem;
-  }
-  .card-1{
-
-  }
-  .card-2{
-
-  }
-  .card-3{
-
-    
-  }
+}

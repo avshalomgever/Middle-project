@@ -1,69 +1,59 @@
 {
-    "data": [
-      {
-        "id": 1,
-        "name": "Alon&Oranit",
-        "kind": "Nature wedding",
-        "image": "./pictures/wedding 1.jpg",
-        "location": ["Forest", "Beach"],
-        "time": "noon",
-        "meal": ["Milky","Vegan"],
-        "guest_composition": "Young people",
-        "explanation": "Step into a world where romance embraces nature's beauty. Our nature-themed wedding is a harmonious blend of enchanting forests and serene beaches. Join us at noon as we exchange vows surrounded by the lush greenery or the soothing sound of waves. Indulge in a delightful feast with Milky and Vegan options, and let the joyous atmosphere created by young people fill your hearts with love."
-       
-      },
-      {
-        "id": 2,
-        "name": "Adam&Hava",
-        "kind": "Traditional wedding",
-        "image": "./pictures/hall 1.jpg",
-        "location": "Hall",
-        "time": "evening",
-        "meal": ["Meaty", "Vegan"],
-        "guest_composition":
-        [ "Old people","Young people"],
-        "explanation": "Celebrate the timeless allure of our traditional wedding. Set in a grand hall, our evening ceremony is steeped in elegance and rich traditions. Join us as we embark on a journey of love and togetherness. Indulge in a sumptuous feast featuring both Meaty and Vegan delicacies, as we bring together generations of old and young people in a celebration filled with joy and cherished memories."
-     
-      },
-      {
-        "id": 3,
-        "name": "Elizabeth&Philip",
-        "kind": "Exclusive wedding",
-        "image": "./pictures/wedding 3.avif",
-        "location": "Beach",
-        "time": "noon",
-        "meal": ["Milky", "Vegan"],
-        "guest_composition": 
-         [ "Old people","Young people"],
-         "explanation": "Prepare to be captivated by our exclusive beachfront wedding. With the sun as our witness, we invite you to join us at noon for an intimate celebration of love. Immerse yourself in the luxurious ambiance of this extraordinary event, surrounded by breathtaking views. Indulge in a culinary experience of Milky and Vegan delights, while the presence of both old and young people creates a vibrant atmosphere of celebration."
-       
-      },
-      {
-        "id": 4,
-        "name": "almog&anava",
-        "kind": "Ecological wedding",
-        "image": "./pictures/wedding 4.jpg",
-        "location": "Forest",
-        "time": "noon",
-        "meal": "vegan",
-        "guest_composition":
-          "Young people",
-          "explanation": "Experience a wedding that embraces sustainability and the beauty of nature. Our ecological wedding, nestled in the heart of a serene forest, is a testament to our commitment to the environment. Join us at noon for a vegan feast that not only delights your taste buds but also showcases our dedication to a greener future. Let the youthful spirit of young people infuse the celebration with joy and a shared passion for preserving our planet."
-        
-      },
-      {
-        "id": 5,
-        "name": "Yonatan%Eden",
-        "kind": "Programers wedding",
-        "image": "./pictures/wedding 5.webp",
-        "location": "Hall",
-        "time": "evening",
-        "meal": "meaty",
-        "guest_composition": 
-          "Young people",
-          "explanation": "Welcome to our one-of-a-kind programmers wedding, where love and technology converge. In a hall buzzing with innovation, we invite you to witness the union of hearts and minds. Join us in the evening as we celebrate our shared love for programming and the endless possibilities it holds. Indulge in a meaty feast that satisfies your appetite for both great food and cutting-edge technology. Let the energy of young people fill the atmosphere with excitement and a shared vision for the future."
-       
-      }
-    ]
-  }
-  
+  "data": [
+    {
+      "id": 1,
+      "name": "Alon&Oranit",
+      "kind": "Nature wedding",
+      "image": "pictures/wedding 1.jpg",
+      "location": ["Forest", "Beach"],
+      "time": ["Afternoon"],
+      "meal": ["Dairy menu", "Vegan menu"],
+      "guest_composition": ["Young people"],
+      "explanation": "Step into a world where romance embraces nature's beauty. Our nature-themed wedding is a harmonious blend of enchanting forests and serene beaches. Join us in the Afternoon as we exchange vows surrounded by the lush greenery or the soothing sound of waves. Indulge in a delightful feast with Dairy menu and Vegan menu options, and let the joyous atmosphere created by young people fill your hearts with love."
+    },
+    {
+      "id": 2,
+      "name": "Adam&Hava",
+      "kind": "Traditional wedding",
+      "image": "./pictures/weddingHall 1.jpg",
+      "location": ["Wedding Hall"],
+      "time": ["Evening"],
+      "meal": ["Meat menu", "Vegan menu"],
+      "guest_composition": ["Adults", "Young people"],
+      "explanation": "Celebrate the timeless allure of our traditional wedding. Set in a grand Wedding Hall, our evening ceremony is steeped in elegance and rich traditions. Join us as we embark on a journey of love and togetherness. Indulge in a sumptuous feast featuring both Meat menu and Vegan menu delicacies, as we bring together generations of old and young people in a celebration filled with joy and cherished memories."
+    },
+    {
+      "id": 3,
+      "name": "Elizabeth&Philip",
+      "kind": "Exclusive wedding",
+      "image": "./pictures/wedding 3.avif",
+      "location": ["Beach"],
+      "time": ["Afternoon"],
+      "meal": ["Dairy menu", "Vegan menu"],
+      "guest_composition": ["Adults", "Young people"],
+      "explanation": "Prepare to be captivated by our exclusive beachfront wedding. With the sun as our witness, we invite you to join us in the Afternoon for an intimate celebration of love. Immerse yourself in the luxurious ambiance of this extraordinary event, surrounded by breathtaking views. Indulge in a culinary experience of Dairy menu and Vegan menu delights, while the presence of both old and young people creates a vibrant atmosphere of celebration."
+    },
+    {
+      "id": 4,
+      "name": "Almog&Anava",
+      "kind": "Ecological wedding",
+      "image": "./pictures/wedding 4.jpg",
+      "location": ["Forest"],
+      "time": ["Afternoon"],
+      "meal": ["Vegan menu"],
+      "guest_composition": ["Young people"],
+      "explanation": "Experience a wedding that embraces sustainability and the beauty of nature. Our ecological wedding, nestled in the heart of a serene forest, is a testament to our commitment to the environment. Join us in the Afternoon for a vegan feast that not only delights your taste buds but also showcases our dedication to a greener future. Let the youthful spirit of young people infuse the celebration with joy and a shared passion for preserving our planet."
+    },
+    {
+      "id": 5,
+      "name": "Yonatan&Eden",
+      "kind": "Programmers wedding",
+      "image": "./pictures/wedding 5.webp",
+      "location": ["Wedding Hall"],
+      "time": ["Evening"],
+      "meal": ["Meat menu"],
+      "guest_composition": ["Young people"],
+      "explanation": "Welcome to our one-of-a-kind programmers wedding, where love and technology converge. In a Wedding Hall buzzing with innovation, we invite you to witness the union of hearts and minds. Join us in the evening as we celebrate our shared love for programming and the endless possibilities it holds. Indulge in a Meat menu feast that satisfies your appetite for both great food and cutting-edge technology. Let the energy of young people fill the atmosphere with excitement and a shared vision for the future."
+    }
+  ]
+}
