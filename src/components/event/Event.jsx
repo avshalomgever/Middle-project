@@ -5,7 +5,12 @@ import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Modal from "@mui/material/Modal";
-import { useState } from 'react';
+import { useState} from "react";
+import CalendarPick from "../calendar/Calendar"; 
+import data from '../../../dataEvent.json'
+import { useParams } from "react-router-dom";
+
+
 const style = {
   position: "absolute",
   top: "50%",
@@ -18,40 +23,46 @@ const style = {
   p: 4,
 };
 
-function Event(value) {
+function Event() {
+  let { id } = useParams();
+  const [data1, setData1] = useState(data.data);
+  let objById = data1.find((obj) => obj.zpid == id);
   const [open, setOpen] = React.useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
 
-  
- 
-
   return (
     <div>
-      <h1 className="headline-event">{value.value.kind}</h1>
+      
       <div className="event-container">
-        <div className="event-image">
-          <img src={value.value.image} />
-        </div>
-        <div className="event-calender"></div>
-        <div className="event-explane">{value.value.explanation}</div>
-        <div>
-          <Button className="event-button" onClick={handleOpen}>
-            Open modal
-          </Button>
+        
+        <div className="event-description">
+        <h1 className="headline-event">{objById.kind}</h1>
+          <div className="event-image">
+            <img src={objById.image} />
+          </div>
+          <div className="event-calender"></div>
+          <div className="event-explane">{objById.explanation}</div>
+          <div className="event-credit-card">
+            <Button className="event-button" onClick={handleOpen}>
+              Open modal
+            </Button>
 
-          <Modal
-            open={open}
-            onClose={handleClose}
-            aria-labelledby="modal-modal-title"
-            aria-describedby="modal-modal-description"
-          >
-            <Box sx={style}>
-              <CreditCard/>
-            </Box>
-          </Modal>
+            <Modal
+              open={open}
+              onClose={handleClose}
+              aria-labelledby="modal-modal-title"
+              aria-describedby="modal-modal-description"
+            >
+              <Box sx={style}>
+                <CreditCard />
+              </Box>
+            </Modal>
+          </div>
         </div>
-        <div className="event-credit-card"></div>
+        <div className="calendar">
+          <CalendarPick />
+        </div>
       </div>
     </div>
   );
