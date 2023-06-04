@@ -1,6 +1,6 @@
 import React from "react";
 import { Routes, Route } from "react-router-dom";
-
+import Event from "./components/event/Event";
 import EventPage from "./components/EventPage/EventPage";
 import Layout from "./components/Layout/Layout";
 import HomePage from "./components/homePage/HomePage";
@@ -18,6 +18,7 @@ function App() {
           <Route path="event" element={<EventMap/>}></Route>
           <Route path="about" element={<About/>} />
           <Route path="EventPage" element={<EventPage/>} />
+          <Route path="EventPage/:id" element={<Event/>}></Route>
           <Route path="*" element={<div>404 Not Found</div>} />
         </Route>
       </Routes>

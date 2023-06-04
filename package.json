@@ -21,6 +21,7 @@
     "@mui/material": "^5.13.3",
     "better-react-carousel": "^1.1.1",
     "react": "^18.2.0",
+    "react-calendar": "^4.2.1",
     "react-router-dom": "^6.11.2"
   },
   "devDependencies": {

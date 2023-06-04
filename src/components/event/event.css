@@ -1,0 +1,74 @@
+
+   .headline-event {
+    text-align: center;
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .event-container {
+    display: grid;
+    grid-template-areas: 'calendar event-description';
+    grid-gap: 20px;
+    background-color: #ffffff;
+  }
+  
+  .event-description {
+    grid-area: event-description;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    max-width: 500px;
+  }
+  
+  .event-image > img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+  }
+  
+  .event-explain {
+    text-align: center;
+    font-size: 16px;
+    color: #555;
+    margin-top: 10px;
+    line-height: 1.4;
+  }
+  
+  .calendar {
+    grid-area: calendar;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .event-description:before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: #ddd;
+    margin-bottom: 10px;
+  }
+  
+  @media (max-width: 870px) {
+    .event-container {
+      grid-template-areas: 'event-description' 'calendar';
+    }
+  
+    .calendar {
+      justify-content: flex-start;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .event-description {
+      padding: 10px;
+    }
+  }
