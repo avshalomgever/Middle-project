@@ -6,14 +6,15 @@ import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
 import data from "../../../dataCard.json";
 import { useState, useEffect } from "react";
+import couples from '../../../dataClient.json'
 
-function Client({value,index}) {
-    console.log(value)
-  return (
+function Client({value,key }) {
+  
+  return (  
     <div>
-      <Card id={index} sx={{ maxWidth: 345 }}>
+      <Card  sx={{ maxWidth: 345,height:"100vh" }}>
         <CardActionArea>
-          <CardMedia component="img" height="140" image={value.image} />
+          <CardMedia component="img" max-width= '100%' height="300px" image={value.image} />
           <CardContent>
             <Typography gutterBottom variant="h5" component="div">
               {value.name} {value.age}

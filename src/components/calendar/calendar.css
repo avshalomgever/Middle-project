@@ -1,0 +1,9 @@
+.marked-date {
+    position: relative;
+    background-color: #ffcc00;
+    border-radius: 50%;
+    width: 10px;
+    height: 10px;
+    top: 2px;
+    margin: 0 auto;
+  }

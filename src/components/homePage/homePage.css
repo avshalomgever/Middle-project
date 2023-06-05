@@ -4,6 +4,7 @@
     box-sizing: border-box;
 }
 
+
 .background-video{
     width: -webkit-fill-available;
   object-fit: contain;
@@ -15,6 +16,10 @@
 }
 
 .about-us{
+  background-image:url('../../../pictures/1234.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
     text-align: center;
   padding: 40px;
   background-color: #f8f8f8;
@@ -32,7 +37,7 @@
     padding: 0;
     border: none;
     border-top: medium double #333;
-    color: #333;
+    color: #222121;
     text-align: center;
     width: 50vh;
     margin: 0 auto;
@@ -48,8 +53,9 @@
 }
 .p-about-us{
     font-size: 18px;
+    font-weight: bold;
   line-height: 1.6;
-  color: #777;
+  color: #3f3f3f;
   margin-bottom: 30px;
 }
 
@@ -139,12 +145,19 @@
 }
 
 .carousel{
-    background-color:#FFE4C4 ;
+    /* background-color:#FFE4C4 ; */
     padding: 20px;
     margin-top: 20px;
 }
 
 .preparatory-course{
+  background-image:url('../../../pictures/123.jpg') ;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* height: 100%; */
+  /* margin: 0;
+  padding: 0; */
     text-align: center;
     font-size: 1.5rem; 
      line-height: 1.5;
@@ -196,6 +209,7 @@ left: 30px;
 border-radius: 30px;
 background-color:  #DEB887;
 box-shadow:0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
+
 }
 
 .image-preparatory-course{
@@ -208,6 +222,54 @@ box-shadow:0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
   height: 100vh;
   object-fit: cover;
   border-radius: 30%;
+}
+.card-client{
+display: flex;
+flex-direction: row;
+padding: 10px;
+height: 100vh;
+gap: 20px;
+}
+
+.scroll-to-top {
+  position: fixed;
+  bottom: 100px;
+  right: 45vw;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: gray;
+
+  color: #fff;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  scroll-behavior: smooth;
+
+}
+
+.scroll-to-top.visible {
+  opacity: 0.7;
+}
+
+.arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.up {
+  transform: rotate(-135deg);
+  -webkit-transform: rotate(-135deg);
+}
+
+.client{
+  display: flex;
+  justify-content: center;
 }
 
 @media screen and (max-width: 868px) {
