@@ -22,8 +22,8 @@ const Layout = () => {
           <Link to="/EventPage" className="link-nav">
           EventPage
           </Link>
-          <Link to="/" className="link-nav">
-            Homepage
+          <Link to="/contact" className="link-nav">
+          Contact Us
           </Link>
         </div>
       </div>
@@ -62,7 +62,7 @@ const Layout = () => {
             <a href="/about">About</a>
           </li>
           <li>
-            <a href="/contact">Contact</a>
+            <a href="/contact">Contact Us</a>
           </li>
         </ul>
       </footer>

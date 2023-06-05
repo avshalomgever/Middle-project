@@ -1,89 +1,4 @@
-/* .about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-image: url("https://cdn0.weddingwire.com/article/3293/3_2/960/jpg/13923-0-cheekwood-estate-gardens-botanical-gardens-wedding.jpeg");
-  background-size: cover;
-  background-position: center;
-}
 
-.about {
-  background: rgba(0, 0, 0, 0.7);
-  padding: 2rem;
-}
-
-.about-content {
-  position: relative;
-  z-index: 1;
-  text-align: center;
-  color: #ffffff;
-  max-width: 800px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-
-.h-about {
-  margin-top: 0;
-}
-
-.icon-about {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 2rem;
-  gap:1em ;
-}
-
-.icon-about span {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.icon-about p {
-  margin-top: 0.5rem;
-}
-
-.comment-section {
-  margin-top: 4rem;
-}
-
-.comment {
-  display: flex;
-  align-items: center;
-}
-
-.comment-img {
-  max-width: 100%;
-  height: auto;
-}
-
-.about-story {
-  background-color: black;
-  height: auto;
-  gap: 2em;
-  padding: 2em;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.black-div {
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-  background-color: #d1be9c;
-  border-radius: 3em;
-  flex: 1;
-}
-
-.story-img {
-  border-radius: 3em;
-  max-width: 100%;
-  height: auto;
-} */
 .about-container {
   display: flex;
   justify-content: center;
@@ -97,6 +12,8 @@
 .about {
   background: rgba(0, 0, 0, 0.7);
   padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .about-content {
@@ -109,6 +26,7 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .h-about {
@@ -117,10 +35,13 @@
 
 .icon-about {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   margin-top: 2rem;
 }
-
+.single-icon-about{
+  margin: 0.3rem;
+}
 .icon-about span {
   display: flex;
   flex-direction: column;
@@ -147,39 +68,64 @@
 }
 
 .about-story {
-  background-color: black;
+  background-image:url(https://img.freepik.com/free-photo/abstract-textured-backgound_1258-30455.jpg?w=740&t=st=1685964062~exp=1685964662~hmac=ee8bf10c0b58e2eeefd963ec19b77953bdf4f8ccd8947e09e3cdba6c69272262);
   height: auto;
   gap: 2em;
   padding: 2em;
   display: flex;
+  justify-content: center;
+  position: relative;
+}
+.story-header{
+  color: #ffffff;
+  align-self: center;
+}
+.story-headline{
+  overflow: visible; 
+  padding: 0;
+  border: none;
+  border-top: medium double #ffffff;
+  color: #ffffff;
+  text-align: center;
+  width: 70vh;
+  margin: 0 auto;
+}
+.story-headline::after{
+  content: "§";
+  display: inline-block;
+  position: relative;
+  top: -0.7em;
+  font-size: 1.5em;
+  padding: 0 0.25em;
+}
+#text-align{
+  display: flex;
+  justify-content: center;
+  height: fit-content;
+  width: 100%;
+
 }
 .text-container {
-  width: 60%;
+  width: 40vw;
   height: auto;
   border: 3px solid #ffffff;
   border-radius: 10px;
   display: flex;
-  justify-content: center;
- color: #ffffff;
-}
+ color: black;
+ background-color: #d1be9c;
+ text-align: center;
 
-.black-div {
-  width: 100%;
-  max-width: 600px;
-  height: 100%;
-  background-color: #d1be9c;
-  border-radius: 3em;
-  flex: 1;
+
 }
 
 .story-img {
   border-radius: 3em;
   max-width: 100%;
   height: auto;
+ 
 }
 
 .about-btn {
-  padding: 1rem 2rem;
   background-color: #d1be9c;
   color: #ffffff;
   border: none;
@@ -187,20 +133,27 @@
   font-size: 1rem;
   cursor: pointer;
   width: 15vw;
+  margin-top: 2vh;
+  
 }
 
 .about-btn:hover {
   background-color: #c0ab8d;
 }
-
+.about-story{
+  display: flex;
+  flex-direction: column;
+}
 @media (max-width: 768px) {
-  .about-story {
-    flex-direction: column;
-  }
+  
 
   .text-container,
   .image-container {
     flex: 1 1 100%;
     text-align: center;
+  }
+  .icon-about{
+    display: flex;
+    flex-direction: column;
   }
 }
