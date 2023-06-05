@@ -1,21 +1,69 @@
-.filter-bar {
+
+.fieldset-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
   background-color: antiquewhite;
   border: 2px black solid;
   border-radius: 10px;
 
 }
-.fieldset-container {
-  display: flex;
-  justify-content: space-around;
-
+.header-filter{
+  font-size: large;
+  font-weight: 600;
+}
+.form-fildset {
+  /* margin-right: 1rem;  */
+  border: none;
+  padding: 0;
+  width: fit-content;
 }
 
-.form-fildset {
-  margin-right: 1rem;  border: none;
-  padding: 0;
+.submit-filter{
+  background-color: whitesmoke;
+  height: 6vh;
+  align-self: center;
+}
+.filter-bar-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width:100% ;
+  /* align-self: flex-start; */
+}
+.fieldset-container-mobile {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  background-color: antiquewhite;
+  border: 2px black solid;
+  border-radius: 10px;
+  align-self: center;
   
 }
-.submit-filter{
+.header-filter-mobile{
+  font-size: large;
+  font-weight: 600;
+}
+.form-fildset-mobile {
+  /* margin-right: 1rem;  */
+  border: none;
+  padding: 0;
+  width: fit-content;
+  margin-bottom: 2vh;
+}
+
+.filter-bar-mobile-mobile{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  width:100% ;
+  
+}
+.submit-filter-mobile{
   background-color: whitesmoke;
   height: 6vh;
   align-self: center;

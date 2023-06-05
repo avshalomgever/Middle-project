@@ -15,7 +15,9 @@
       "id": 2,
       "name": "Adam&Hava",
       "kind": "Traditional wedding",
+
       "image": "https://images.squarespace-cdn.com/content/v1/5ad6eb5f620b85ea1e999510/1590288903955-Q04AARNFNI9RS9A0FS8F/the_temple_house_events-822.jpg",
+
       "location": ["Wedding Hall"],
       "time": ["Evening"],
       "meal": ["Meat menu", "Vegan menu"],

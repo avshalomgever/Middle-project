@@ -4,7 +4,7 @@ import CardContent from "@mui/material/CardContent";
 import CardMedia from "@mui/material/CardMedia";
 import Typography from "@mui/material/Typography";
 import { CardActionArea } from "@mui/material";
-import data from "../../../dataCard.json";
+import data from "../../../dataEvent.json";
 import { useState, useEffect } from "react";
 import couples from '../../../dataClient.json'
 
