@@ -1,0 +1,26 @@
+{
+    "couples": [
+      {
+        "id":1,
+        "name": "John and Sarah",
+        "age":28,
+        "image": "https://www.brides.com/thmb/phFLfofOAS5QwbvIjmNwd1hhfLY=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/justina-jordan-wedding-sq-b9f66d2a153349e186d1048ddb44f93a.jpg",
+        "experience": "We had an amazing time at our wedding with your services. Everything was organized perfectly, and the attention to detail was outstanding."
+      },
+      {
+        "id":2,
+        "name": "Michael and Emily",
+        "age": 30,
+        "image": "https://www.brides.com/thmb/HJZKCXzaKeNEVRhYKB3ssNuzTlg=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/ChloeandSterling-K.R.Morenosq-75c03aa5be7c4c9c808ff32ce7f2ad3e.jpg",
+        "experience": "Our wedding day was truly magical, thanks to your exceptional services. The professionalism and friendliness of your staff were commendable."
+      },
+      {
+        "id":3,
+        "name": "David and Jessica",
+        "age":25,
+        "image": "https://www.brides.com/thmb/urfe4bFuxu6-3EttogaAeYEciA0=/1500x0/filters:no_upscale():max_bytes(150000):strip_icc()/sq-7b061837aacb4c079a67e6dd4e2cccdf.jpg",
+        "experience": "We are extremely grateful for the wonderful wedding experience you provided. From the initial planning stages to the last dance, everything exceeded our expectations."
+      }
+    ]
+  }
+  

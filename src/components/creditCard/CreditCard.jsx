@@ -1,31 +1,26 @@
 import React, { useState } from 'react';
 import './creditCard.css';
+import Cards from 'react-credit-cards-2';
+import 'react-credit-cards-2/dist/es/styles-compiled.css';
 
 function CreditCard() {
-  const [cardNumber, setCardNumber] = useState('');
-  const [cardHolder, setCardHolder] = useState('');
-  const [expiryDate, setExpiryDate] = useState('');
-  const [cvv, setCVV] = useState('');
-  const [errors, setErrors] = useState({});
 
-  const handleCardNumberChange = (e) => {
-    setCardNumber(e.target.value);
-    setErrors((prevErrors) => ({ ...prevErrors, cardNumber: '' }));
+  const [state, setState] = useState({
+    number: '',
+    expiry: '',
+    cvc: '',
+    name: '',
+    focus: '',
+    errors: {},
+  });
+
+  const handleInputChange = (evt) => {
+    const { name, value } = evt.target;
+    setState((prev) => ({ ...prev, [name]: value }));
   };
 
-  const handleCardHolderChange = (e) => {
-    setCardHolder(e.target.value);
-    setErrors((prevErrors) => ({ ...prevErrors, cardHolder: '' }));
-  };
-
-  const handleExpiryDateChange = (e) => {
-    setExpiryDate(e.target.value);
-    setErrors((prevErrors) => ({ ...prevErrors, expiryDate: '' }));
-  };
-
-  const handleCVVChange = (e) => {
-    setCVV(e.target.value);
-    setErrors((prevErrors) => ({ ...prevErrors, cvv: '' }));
+  const handleInputFocus = (evt) => {
+    setState((prev) => ({ ...prev, focus: evt.target.name }));
   };
 
   const handleSubmit = (e) => {
@@ -33,92 +28,126 @@ function CreditCard() {
 
     const newErrors = {};
 
-    if (!cardNumber) {
+    if (!state.number) {
       newErrors.cardNumber = 'Please enter a valid card number';
     }
 
-    if (!cardHolder) {
+    if (!state.name) {
       newErrors.cardHolder = 'Please enter the cardholder name';
     }
 
-    if (!expiryDate) {
+    if (!state.expiry) {
       newErrors.expiryDate = 'Please enter the expiry date';
     }
 
-    if (!cvv) {
+    if (!state.cvc) {
       newErrors.cvv = 'Please enter the CVV';
     }
 
-    setErrors(newErrors);
+    setState((prev) => ({ ...prev, errors: newErrors }));
 
-    // Perform payment processing logic here
-    // You can use the state values (cardNumber, cardHolder, expiryDate, cvv) to send the payment information to your backend or perform any necessary actions.
+    if (Object.keys(newErrors).length === 0) {
+      const selectedDate = localStorage.getItem('selectedDate');
+      const selectedKind = localStorage.getItem('selectedKind');
+      
+      const paymentData = {
+        number: state.number,
+        name: state.name,
+        expiry: state.expiry,
+        cvc: state.cvc,
+        selectedDate: selectedDate,
+        selectedKind: selectedKind
+      };
 
-    // Reset form fields
-    setCardNumber('');
-    setCardHolder('');
-    setExpiryDate('');
-    setCVV('');
+      const existingPayments = JSON.parse(localStorage.getItem('payments')) || [];
+      const updatedPayments = [...existingPayments, paymentData];
+      localStorage.setItem('payments', JSON.stringify(updatedPayments));
+      localStorage.setItem('isButtonClicked', 'true');
+      
+      
+      setState({
+        number: '',
+        expiry: '',
+        cvc: '',
+        name: '',
+        focus: '',
+        errors: {},
+      });
+    }
   };
 
   return (
     <div>
       <div className="credit-card-container">
         <h2 className="credit-card-title">Credit Card Payment</h2>
+        <Cards
+          number={state.number}
+          name={state.name}
+          expiry={state.expiry}
+          cvc={state.cvc}
+          focused={state.focus}
+        />
         <form className="credit-card-form" onSubmit={handleSubmit}>
           <label className="credit-card-label">
             Card Number:
             <input
-              className={`credit-card-input ${errors.cardNumber ? 'error' : ''}`}
-              type='number'
+              className={`credit-card-input ${state.errors.cardNumber ? 'error' : ''}`}
+              type="text"
               required
-              value={cardNumber}
-              onChange={handleCardNumberChange}
+              name="number"
+              value={state.number}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
               placeholder="Card Number"
             />
-            {errors.cardNumber && <span className="error-message">{errors.cardNumber}</span>}
+            {state.errors.cardNumber && <span className="error-message">{state.errors.cardNumber}</span>}
           </label>
           <br />
           <label className="credit-card-label">
             Card Holder:
             <input
-              className={`credit-card-input ${errors.cardHolder ? 'error' : ''}`}
+              className={`credit-card-input ${state.errors.cardHolder ? 'error' : ''}`}
               type="text"
               required
-              value={cardHolder}
-              onChange={handleCardHolderChange}
+              name="name"
+              value={state.name}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
               placeholder="Name"
             />
-            {errors.cardHolder && <span className="error-message">{errors.cardHolder}</span>}
+            {state.errors.cardHolder && <span className="error-message">{state.errors.cardHolder}</span>}
           </label>
           <br />
           <label className="credit-card-label">
             Expiry Date:
             <input
-              className={`credit-card-input ${errors.expiryDate ? 'error' : ''}`}
-              type='text'
+              className={`credit-card-input ${state.errors.expiryDate ? 'error' : ''}`}
+              type="text"
               required
-              value={expiryDate}
-              onChange={handleExpiryDateChange}
+              name="expiry"
+              value={state.expiry}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
               placeholder="MM/YY"
             />
-            {errors.expiryDate && <span className="error-message">{errors.expiryDate}</span>}
+            {state.errors.expiryDate && <span className="error-message">{state.errors.expiryDate}</span>}
           </label>
           <br />
           <label className="credit-card-label">
             CVV:
             <input
-              className={`credit-card-input ${errors.cvv ? 'error' : ''}`}
-              type='text'
+              className={`credit-card-input ${state.errors.cvv ? 'error' : ''}`}
+              type="text"
               required
-              size='3'
-              maxLength='3'
-              min='3'
-              value={cvv}
-              onChange={handleCVVChange}
-              placeholder="cvv"
+              size="3"
+              maxLength="3"
+              name="cvc"
+              value={state.cvc}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              placeholder="CVV"
             />
-            {errors.cvv && <span className="error-message">{errors.cvv}</span>}
+            {state.errors.cvv && <span className="error-message">{state.errors.cvv}</span>}
           </label>
           <br />
           <button className="credit-card-submit-button" type="submit">
@@ -131,3 +160,4 @@ function CreditCard() {
 }
 
 export default CreditCard;
+

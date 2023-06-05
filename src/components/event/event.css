@@ -56,7 +56,27 @@
     background-color: #ddd;
     margin-bottom: 10px;
   }
-  
+  .event-details{
+    
+    /* list-style: circle; */
+    /* display: flex; */
+    /* flex-wrap: wrap; */
+    /* text-align: center; */
+    padding: 0;
+    margin: 0;
+
+  }
+  .event-details-li{
+    margin-bottom: 10px;
+  font-size: 16px;
+  gap: 10px;
+  /* padding-left: 15px; */
+  }
+  .event-details-li:before {
+    content: "•";
+    display: inline-block;
+    margin-right: 5px;
+  }
   @media (max-width: 870px) {
     .event-container {
       grid-template-areas: 'event-description' 'calendar';

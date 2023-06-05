@@ -1,9 +1,10 @@
 import React from "react";
 import "./homePage.css";
-import Carousel from "better-react-carousel";
+// import Carousel from "better-react-carousel";
 import Client from "../client-card/Client";
 import data from "../../../dataEvent.json";
 import { useState, useEffect } from "react";
+import Carousel from "../carousel/Carousel";
 import {
   Card,
   CardActionArea,
@@ -11,23 +12,47 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import {Link} from 'react-router-dom'
+import { Link } from "react-router-dom";
+import couples from "../../../dataClient.json";
 
 function HomePage() {
   const [data1, setData1] = useState([]);
 
   useEffect(() => {
-    setData1(data.couples);
+    setData1(couples.couples);
+  }, [couples]);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener('scroll', handleScroll);
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
   }, []);
+
+  const handleScroll = () => {
+    const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+    const shouldShowButton = scrollTop > 100;
+    setIsVisible(shouldShowButton);
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
   return (
     <div>
       <div className="background-image">
         <video
-        className="background-video"
+          className="background-video"
           src="../../../pictures/wedding clip.mp4"
           type="video/mp4"
           autoPlay
-          loop muted controls
+          loop
+          muted
+          controls
         ></video>
       </div>
       <div className="about-us">
@@ -39,13 +64,15 @@ function HomePage() {
           corrupti soluta ex totam, voluptate harum facere dolorem? Omnis, harum
           nesciunt.
         </p>
+        <Link to={'/about'}>
         <button className="button-about">Our Story</button>
+        </Link>
       </div>
       <div className="routes-cotainer">
         <div className="routes-image">
           <img
             className="routes-image-img"
-            src="../../../pictures/routes pic.jpg"
+            src="../../../pictures/1.jpg"
             alt=""
           />
         </div>
@@ -60,48 +87,50 @@ function HomePage() {
             porro ad cupiditate sunt temporibus aliquid praesentium incidunt
             vitae! Omnis ab harum sequi!
           </p>
-          <Link to={'/EventPage'}> 
-          <button className="button-routes">To the wedding</button>
+          <Link to={"/EventPage"}>
+            <button className="button-routes">To the wedding</button>
           </Link>
         </div>
       </div>
       <div className="carousel">
-        <Carousel
-          cols={2}
-          rows={1}
-          gap={10}
-          loop
-          scrollSnap={true}
-          showDots={true}
-        >
-          <Carousel.Item>
-            <img
-              style={{ borderRadius: "70px" }}
-              width="100%"
-              src="../../../pictures/hall 1.jpg"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              style={{ borderRadius: "70px" }}
-              width="100%"
-              src="../../../pictures/hall 4.jpg"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              style={{ borderRadius: "70px" }}
-              width="100%"
-              src="../../../pictures/hall 3.jpg"
-            />
-          </Carousel.Item>
-          <Carousel.Item>
-            <img
-              style={{ borderRadius: "70px" }}
-              width="100%"
-              src="../../../pictures/hall 5.webp"
-            />
-          </Carousel.Item>
+        <h1>Flavors Of Love</h1>
+        <Carousel show={2} infiniteLoop={true}>
+          <div>
+            <div style={{ padding: 8 }}>
+              <img
+                src="../../../pictures/hall 1.jpg"
+                alt="placeholder"
+                style={{ width: "100%", borderRadius: "80vh " }}
+              />
+            </div>
+          </div>
+          <div>
+            <div style={{ padding: 8 }}>
+              <img
+                src="../../../pictures/hall 4.jpg"
+                alt="placeholder"
+                style={{ width: "100%", borderRadius: "80vh " }}
+              />
+            </div>
+          </div>
+          <div>
+            <div style={{ padding: 8 }}>
+              <img
+                src="../../../pictures/hall 3.jpg"
+                alt="placeholder"
+                style={{ width: "100%", borderRadius: "80vh " }}
+              />
+            </div>
+          </div>
+          <div>
+            <div style={{ padding: 8 }}>
+              <img
+                src="../../../pictures/hall 5.webp"
+                alt="placeholder"
+                style={{ width: "100%", borderRadius: "80vh " }}
+              />
+            </div>
+          </div>
         </Carousel>
       </div>
       <div className="preparatory-course">
@@ -122,33 +151,24 @@ function HomePage() {
           <img src="../../../pictures/pic course2.jpeg" />
         </div>
       </div>
+
+      <div className="card-client">
+        {data1 &&
+          data1.map((value, index) => {
+            return (
+              <div className="client" >
+                <Client key={index} value={value}></Client>
+              </div>
+            );
+          })}
+      </div>
       <div>
-        <Carousel cols={2} rows={1} gap={10} loop>
-          {data1 &&
-            data1.map((value, index) => {
-              return (
-                <Carousel.Item key={index}>
-                  <Card sx={{ maxWidth: 345 }}>
-                    <CardActionArea>
-                      <CardMedia
-                        component="img"
-                        height="140"
-                        image="https://picsum.photos/200"
-                      />
-                      <CardContent>
-                        <Typography height='100%' gutterBottom variant="h5" component="div">
-                          {value.name} {value.age}
-                        </Typography>
-                        <Typography variant="body2" color="text.secondary">
-                          {value.experience}
-                        </Typography>
-                      </CardContent>
-                    </CardActionArea>
-                  </Card>
-                </Carousel.Item>
-              );
-            })}
-        </Carousel>
+      <button
+      className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
+      onClick={scrollToTop}
+    >
+ <i className="arrow up"></i>
+    </button>
       </div>
     </div>
   );
