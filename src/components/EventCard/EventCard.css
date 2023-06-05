@@ -82,8 +82,7 @@
   font-size: 1.5rem;
   font-weight: bold;
 }
-#card-1{
-}
+
 #card-2{
   align-self: center;
   
@@ -105,8 +104,14 @@ button {
 }
 
 
-@media (max-width: 768px) {
-  .card {
-    width:40vw;
+@media (max-width: 800px) {
+  .top-choice {
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: fit-content;
+  }
+  #card-3{
+    align-self: auto;
+  
   }
 }

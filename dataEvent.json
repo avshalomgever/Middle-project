@@ -15,7 +15,7 @@
       "id": 2,
       "name": "Adam&Hava",
       "kind": "Traditional wedding",
-      "image": "./pictures/weddingHall 1.jpg",
+      "image": "pictures/hall 1.jpg",
       "location": ["Wedding Hall"],
       "time": ["Evening"],
       "meal": ["Meat menu", "Vegan menu"],

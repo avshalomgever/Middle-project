@@ -2,7 +2,7 @@ import React from "react";
 import "./homePage.css";
 import Carousel from "better-react-carousel";
 import Client from "../client-card/Client";
-import data from "../../../dataCard.json";
+import data from "../../../dataEvent.json";
 import { useState, useEffect } from "react";
 import {
   Card,

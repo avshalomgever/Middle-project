@@ -67,7 +67,7 @@ if (SelectData && Data1) {
       <div className="filter-section">
         <FilterBar setSelectData={setSelectData} />
         <div className="fit4u">
-          <h2>our  result</h2>
+          <h2>Our  results</h2>
           <EventCard data={data} />
         </div>
       </div>
