@@ -87,7 +87,7 @@
   border-top: medium double #ffffff;
   color: #ffffff;
   text-align: center;
-  width: 70vh;
+  width:70vw;
   margin: 0 auto;
 }
 .story-headline::after{

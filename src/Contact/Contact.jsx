@@ -104,7 +104,7 @@ export const Contact = () => {
         ) : (
           <div className="message-sent-container">
             <Link to="/" ><button className="Home-button-contact" >
-              Go to Home
+              Go to Home Page
             </button></Link>
           </div>
         )}
