@@ -10,6 +10,7 @@ function CreditCard() {
     expiry: '',
     cvc: '',
     name: '',
+     email: '',
     focus: '',
     errors: {},
   });
@@ -55,6 +56,7 @@ function CreditCard() {
         name: state.name,
         expiry: state.expiry,
         cvc: state.cvc,
+         email: state.email,
         selectedDate: selectedDate,
         selectedKind: selectedKind
       };
@@ -70,6 +72,7 @@ function CreditCard() {
         expiry: '',
         cvc: '',
         name: '',
+         email: '',
         focus: '',
         errors: {},
       });
@@ -150,6 +153,20 @@ function CreditCard() {
             {state.errors.cvv && <span className="error-message">{state.errors.cvv}</span>}
           </label>
           <br />
+          <label className="credit-card-label">
+            Email:
+            <input
+              className={`credit-card-input ${state.errors.email ? 'error' : ''}`}
+              type="email"
+              required
+              name="email"
+              value={state.email}
+              onChange={handleInputChange}
+              onFocus={handleInputFocus}
+              placeholder="Email"
+            />
+            {state.errors.email && <span className="error-message">{state.errors.email}</span>}
+          </label>
           <button className="credit-card-submit-button" type="submit">
             Submit Payment
           </button>
