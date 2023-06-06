@@ -10,7 +10,7 @@ function CreditCard() {
     expiry: '',
     cvc: '',
     name: '',
-     email: '',
+    email: '',
     focus: '',
     errors: {},
   });
@@ -56,7 +56,7 @@ function CreditCard() {
         name: state.name,
         expiry: state.expiry,
         cvc: state.cvc,
-         email: state.email,
+        email: state.email,
         selectedDate: selectedDate,
         selectedKind: selectedKind
       };
@@ -72,7 +72,7 @@ function CreditCard() {
         expiry: '',
         cvc: '',
         name: '',
-         email: '',
+        email: '',
         focus: '',
         errors: {},
       });

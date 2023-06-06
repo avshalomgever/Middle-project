@@ -20,7 +20,6 @@
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@mui/material": "^5.13.3",
-    "better-react-carousel": "^1.1.1",
     "emailjs-com": "^3.2.0",
     "react": "^18.2.0",
     "react-calendar": "^4.2.1",

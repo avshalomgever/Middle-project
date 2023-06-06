@@ -4,7 +4,14 @@ import "./homePage.css";
 import Client from "../client-card/Client";
 import data from "../../../dataEvent.json";
 import { useState, useEffect } from "react";
+import video from "../../../pictures/wedding clip.mp4"
 import Carousel from "../carousel/Carousel";
+import image1 from "../../../pictures/1.jpg"
+import image2 from "../../../pictures/food8.jpg"
+import image3 from "../../../pictures/food3.jpg"
+import image4 from "../../../pictures/food2.jpg"
+import image5 from "../../../pictures/food7.jpg"
+import image6 from "../../../pictures/pic course2.jpeg"
 import {
   Card,
   CardActionArea,
@@ -47,7 +54,7 @@ function HomePage() {
       <div className="background-image">
         <video
           className="background-video"
-          src="../../../pictures/wedding clip.mp4"
+          src={video}
           type="video/mp4"
           autoPlay
           loop
@@ -72,7 +79,7 @@ function HomePage() {
         <div className="routes-image">
           <img
             className="routes-image-img"
-            src="../../../pictures/1.jpg"
+            src={image1}
             alt=""
           />
         </div>
@@ -98,7 +105,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/food8.jpg"
+                src={image2}
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -107,7 +114,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/food3.jpg"
+                src={image3}
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -116,7 +123,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/food2.jpg"
+                src={image4}
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -125,7 +132,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/food7.jpg"
+                src={image5}
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -158,7 +165,7 @@ function HomePage() {
           <button className="button-preparatory-course">Let's start</button></Link>
         </div>
         <div className="image-preparatory-course">
-          <img src="../../../pictures/pic course2.jpeg" />
+          <img src={image6}/>
         </div>
       </div>
 

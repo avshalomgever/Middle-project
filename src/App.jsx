@@ -7,7 +7,6 @@ import HomePage from "./components/homePage/HomePage";
 import About from "./components/Aboutus/About";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import EventMap from "./components/event/EventMap";
-// import LogIn from "./components/LogIn/LogIn";
 import Contact from "./Contact/Contact";
 import {Context} from "./Context/Context.jsx";
 import { useContext,useState } from "react";
