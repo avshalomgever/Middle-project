@@ -1,6 +1,6 @@
 
 import React, { useState } from "react";
-import "./Course.css";
+import "./course.css";
 
 const Course = () => {
   const [isRegistered, setIsRegistered] = useState(false);

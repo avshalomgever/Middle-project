@@ -1,6 +1,6 @@
 import React from "react";
 import "./event.css";
-import CreditCard from "../CreditCard/CreditCard";
+import CreditCard from "../creditCard/CreditCard";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
