@@ -5,6 +5,7 @@ import {
   faBusinessTime,
   faHeart,
   faUsers,
+  faArrowDown
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
@@ -24,14 +25,15 @@ const About = () => {
                 <FontAwesomeIcon icon={faHeart} />
                 <p>over 20,000 couples</p>
               </div>
-              <div className="single-icon-about"  >
+              <div style={{marginBottom:"2vh"}}
+               className="single-icon-about"  >
                 <FontAwesomeIcon icon={faUsers} />
                 <p>300 employees</p>
               </div>
             </div>
             <div>
-              
-            <a href="#story-headline"><button className="about-btn">For More...</button></a>
+            <p>our  story</p>
+            <FontAwesomeIcon icon={faArrowDown} />
               
             </div>
           </div>
@@ -44,14 +46,14 @@ const About = () => {
         <div className="text-container" id="text-align">
           Our event hall is more than just a venue -- we pride ourselves on
           offering a personalized elove storyxperience for couples embarking on their
-          special journey. With years of experience, our team specializes in
+          special journey. <br /> With years of experience, our team specializes in
           providing dedicated support and guidance to couples throughout the
-          entire planning process. From the initial consultation to the final
+          entire planning process. <br /> From the initial consultation to the final
           moments of the event, we are by your side, ensuring that every detail
-          is taken care of with meticulous care and attention. Our personalized
+          is taken care of with meticulous care and attention. <br /> Our personalized
           accompaniment extends beyond logistics; we take the time to understand
           your vision, preferences, and dreams, curating an unforgettable event
-          that reflects your unique love story. Trust us to bring your vision to
+          that reflects your unique love story. <br /> Trust us to bring your vision to
           life and create memories that will be cherished for a lifetime.
         </div>
       </div>

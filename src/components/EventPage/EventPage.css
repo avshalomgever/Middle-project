@@ -3,6 +3,7 @@
     flex-direction: column;
     justify-content: center;
     gap: 2vh;
+    background-image: url("C:\Users\97250\OneDrive\שולחן העבודה\code\Middle-project\pictures\pexels-henry-&-co-1939485.jpg");
 }
 .openning{
     display: flex;
