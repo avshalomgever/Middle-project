@@ -1,12 +1,13 @@
 import React from "react";
 import "./chef.css";
 import { Link } from "react-router-dom";
+import image10 from "../../../pictures/pinukim.jpg"
 function Chef() {
   return (
     <div>
       <div className="chef-container">
         <div className="chef-image">
-          <img src="../../../pictures/pinukim.jpg" alt="" />
+          <img src={image10} alt="" />
         </div>
         <div className="chef-details">
           <h1>The indulgent-indulges</h1>
