@@ -11,6 +11,8 @@ import EventMap from "./components/event/eventMap";
 import Contact from "./Contact/Contact";
 import {Context} from "./Context/Context.jsx";
 import { useContext,useState } from "react";
+import Chef from "./components/chef/Chef";
+import Course from "./components/course/Course";
 function App() {
 const[users,setUsers]=useState(Context)
   return (
@@ -23,7 +25,9 @@ const[users,setUsers]=useState(Context)
             <Route path="about" element={<About />} />
             <Route path="EventPage" element={<EventPage />} />
             <Route path="EventPage/:id" element={<Event />}></Route>
+            <Route path="course" element={<Course/>}></Route>
             <Route path="contact" element={<Contact />}></Route>
+            <Route path="chef" element={<Chef/>}></Route>
             {/* <Route path="login" element={<LogIn />} /> */}
             <Route path="*" element={<div>404 Not Found</div>} />
           </Route>

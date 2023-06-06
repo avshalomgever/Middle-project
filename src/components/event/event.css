@@ -64,22 +64,48 @@
     /* text-align: center; */
     padding: 0;
     margin: 0;
-
+    list-style: none;
   }
   .event-details-li{
     margin-bottom: 10px;
   font-size: 16px;
-  gap: 10px;
+  /* gap: 10px; */
+  display: flex;
+  align-items: center;
   /* padding-left: 15px; */
   }
   .event-details-li:before {
     content: "•";
     display: inline-block;
     margin-right: 5px;
+    color: #888;
+  }
+
+  .event-button {
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    background-color: #fca311;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .event-button:hover {
+    background-color: #e89e0c;
+  }
+  
+  .event-button:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #fca311;
   }
   @media (max-width: 870px) {
     .event-container {
       grid-template-areas: 'event-description' 'calendar';
+      padding: 10px;
+
     }
   
     .calendar {
