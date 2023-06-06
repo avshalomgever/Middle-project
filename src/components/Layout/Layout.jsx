@@ -3,24 +3,29 @@ import "./Layout.css";
 import { Outlet, Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook ,faInstagram,faGithub} from "@fortawesome/free-brands-svg-icons";
+import {faGem} from '@fortawesome/free-solid-svg-icons'
+ 
 
 const Layout = () => {
+  
   return (
     <div className="layout">
       <div className="nav-bar">
-        <img
-          src="https://static.vecteezy.com/system/resources/previews/001/192/065/original/circle-logo-turbine-png.png"
-          className="img-nav-bar"
-        />
+        <Link to={'/'}>
+         <img className="img-nav-bar"
+          src="https://static.vecteezy.com/system/resources/previews/001/192/065/original/circle-logo-turbine-png.png" 
+         
+        
+         /> </Link>
         <div className="left-nav">
           <Link to="/" className="link-nav">
-            Homepage
+            HomePage
           </Link>
           <Link to="/about" className="link-nav">
             About Us
           </Link>
           <Link to="/EventPage" className="link-nav">
-          EventPage
+          Wdding Me
           </Link>
           <Link to="/contact" className="link-nav">
           Contact Us
@@ -32,26 +37,26 @@ const Layout = () => {
       <hr />
       <footer className="footer">
         <div className="social-links">
-          <a
+          <a 
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faFacebook} />
+            <FontAwesomeIcon className="icon" icon={faFacebook} />
           </a>
           <a
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faInstagram} />
+            <FontAwesomeIcon  className="icon" icon={faInstagram} />
           </a>
-          <a
+          <a 
             href="https://www.github.com"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FontAwesomeIcon icon={faGithub} />
+            <FontAwesomeIcon className="icon" icon={faGithub} />
           </a>
         </div>
         <ul className="footer-links">

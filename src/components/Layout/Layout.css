@@ -8,7 +8,12 @@
     display: flex;
     justify-content: space-between;
     background-color: #d1be9c;
-    
+    border: none;
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 100;
   }
   
   .img-nav-bar {
@@ -21,15 +26,42 @@
     align-content: center;
     justify-content: space-around;
     width: 90%;
+    
   }
   
   .link-nav {
-    text-decoration: none;
+    font-size:1rem;
+    font-weight: bold;
     color: whitesmoke;
+    text-decoration: none;
+    margin-bottom: 10px;
+    transition: all 0.3s ease;
+    position: relative;
+
+
   }
+  
   .link-nav:hover {
-    text-decoration: underline;
+    color: #f8f4e5;
   }
+
+  .link-nav::after{
+    content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  height: 2px;
+  width: 100%;
+  background-color:#f8f4e5; 
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  transform-origin: left;
+}
+.link-nav:hover::after{
+    transform: scaleX(1);
+}
+  
+  
   
 .footer {
     background-color: #d1be9c;
@@ -67,4 +99,8 @@
   .footer-links a:hover {
     text-decoration: underline;
   }
-  
+  .icon{
+    transition: transform 0.2s;  }
+  .icon:hover{
+    transform: scale(1.5);
+  }

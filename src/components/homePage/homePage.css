@@ -55,7 +55,7 @@
     font-size: 18px;
     font-weight: bold;
   line-height: 1.6;
-  color: #3f3f3f;
+  color: #252525;
   margin-bottom: 30px;
 }
 
@@ -119,6 +119,7 @@
     text-align: center;
     font-size: 1.5rem; 
      line-height: 1.5;
+     padding: 5px;
    }
    .button-routes{
     padding: 12px 24px;
@@ -145,10 +146,30 @@
 }
 
 .carousel{
-    /* background-color:#FFE4C4 ; */
     padding: 20px;
     margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
+.carousel h1 {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.carousel hr.hr-headline {
+  margin: 20px auto;
+}
+
+.carousel h2 {
+  font-size: 24px;
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+
+
 
 .preparatory-course{
   background-image:url('../../../pictures/123.jpg') ;
@@ -182,6 +203,7 @@
     border-radius: 6px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+
    }
    .button-preparatory-course:hover{
     background-color: #ffeedb;
@@ -204,6 +226,7 @@
 }
 
 .words-preparatory-course{
+  padding: 5px;
     position: relative;
 left: 30px;
 border-radius: 30px;
@@ -226,15 +249,17 @@ box-shadow:0 2px 4px rgba(0, 0, 0, 0.2), 0 4px 8px rgba(0, 0, 0, 0.2);
 .card-client{
 display: flex;
 flex-direction: row;
+justify-content: center;
 padding: 10px;
-height: 100vh;
+/* height: 100vh; */
 gap: 20px;
 }
+
 
 .scroll-to-top {
   position: fixed;
   bottom: 100px;
-  right: 45vw;
+  right: 4vw;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -273,6 +298,12 @@ gap: 20px;
 }
 
 @media screen and (max-width: 868px) {
+  .card-client>:first-child{
+display: none;
+  }
+  .card-client>:last-child{
+    display: none;
+  }
     .routes-cotainer {
       display: flex;
       flex-direction: column;

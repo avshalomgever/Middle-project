@@ -24,9 +24,9 @@ function HomePage() {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
+    window.addEventListener("scroll", handleScroll);
     return () => {
-      window.removeEventListener('scroll', handleScroll);
+      window.removeEventListener("scroll", handleScroll);
     };
   }, []);
 
@@ -39,7 +39,7 @@ function HomePage() {
   const scrollToTop = () => {
     window.scrollTo({
       top: 0,
-      behavior: 'smooth',
+      behavior: "smooth",
     });
   };
   return (
@@ -59,13 +59,13 @@ function HomePage() {
         <h1 className="about-us-headline">Love, Soul, Creation</h1>
         <hr className="hr-headline" />
         <p className="p-about-us">
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Autem iusto
-          magni totam. Praesentium voluptas ad pariatur aspernatur sequi aut
-          corrupti soluta ex totam, voluptate harum facere dolorem? Omnis, harum
-          nesciunt.
+          When love, Soul and Creation meet there is something megical in the
+          air. with us you can make your dream come true and reunite with your
+          loved ones. Let's start a magical journey to the land of lovers. Let
+          us be your guide and we shall begin!
         </p>
-        <Link to={'/about'}>
-        <button className="button-about">Our Story</button>
+        <Link to={"/about"}>
+          <button className="button-about">Our Story</button>
         </Link>
       </div>
       <div className="routes-cotainer">
@@ -82,23 +82,23 @@ function HomePage() {
           </h1>
           <hr className="hr-headline" />
           <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Provident
-            dolor minima nisi consequatur consequuntur. Laudantium, quasi culpa
-            porro ad cupiditate sunt temporibus aliquid praesentium incidunt
-            vitae! Omnis ab harum sequi!
+            Beginning of the journey to love, is not an easy thing. We are here
+            to give the space to shine and to drow. We are here to make your
+            dream come true. Choose your own event and let as guide you. Your journey begin now! 
           </p>
           <Link to={"/EventPage"}>
-            <button className="button-routes">To the wedding</button>
+            <button className="button-routes">To the wedding!</button>
           </Link>
         </div>
       </div>
       <div className="carousel">
         <h1>Flavors Of Love</h1>
+        <hr className="hr-headline" />
         <Carousel show={2} infiniteLoop={true}>
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/hall 1.jpg"
+                src="../../../pictures/food8.jpg"
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -107,7 +107,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/hall 4.jpg"
+                src="../../../pictures/food3.jpg"
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -116,7 +116,7 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/hall 3.jpg"
+                src="../../../pictures/food2.jpg"
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
@@ -125,13 +125,20 @@ function HomePage() {
           <div>
             <div style={{ padding: 8 }}>
               <img
-                src="../../../pictures/hall 5.webp"
+                src="../../../pictures/food7.jpg"
                 alt="placeholder"
                 style={{ width: "100%", borderRadius: "80vh " }}
               />
             </div>
           </div>
         </Carousel>
+        <h2>
+          Taste waterfall of flavors. Our delicaies are made with the infinite
+          love of our talented chefs.
+        </h2>
+        <Link to={"/chef"}>
+          <button className="button-routes">Meet the chef</button>
+        </Link>
       </div>
       <div className="preparatory-course">
         <div className="information-preparatory-course">
@@ -140,12 +147,15 @@ function HomePage() {
           </h1>
           <hr className="hr-headline" />
           <div className="words-preparatory-course">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Provident
-            dicta voluptates reprehenderit, quo animi rerum. Suscipit aliquid
-            minus eius quam mollitia odit similique voluptatem, exercitationem
-            ratione obcaecati reiciendis quo iste?
+          Discover the keys to a fulfilling and harmonious marriage in our
+        Marriage Enrichment Course. Join us on a transformative journey to
+        strengthen your bond, improve communication, and deepen your love and
+        connection with your partner. This course is designed for married
+        couples who want to invest in their relationship and create a lifetime
+        of happiness together.
           </div>
-          <button className="button-preparatory-course">Let's start</button>
+          <Link to={'/course'}>
+          <button className="button-preparatory-course">Let's start</button></Link>
         </div>
         <div className="image-preparatory-course">
           <img src="../../../pictures/pic course2.jpeg" />
@@ -156,19 +166,19 @@ function HomePage() {
         {data1 &&
           data1.map((value, index) => {
             return (
-              <div className="client" >
+              <div className="client">
                 <Client key={index} value={value}></Client>
               </div>
             );
           })}
       </div>
       <div>
-      <button
-      className={`scroll-to-top ${isVisible ? 'visible' : ''}`}
-      onClick={scrollToTop}
-    >
- <i className="arrow up"></i>
-    </button>
+        <button
+          className={`scroll-to-top ${isVisible ? "visible" : ""}`}
+          onClick={scrollToTop}
+        >
+          <i className="arrow up"></i>
+        </button>
       </div>
     </div>
   );
